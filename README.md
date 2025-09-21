@@ -22,10 +22,10 @@ Again, ensure that you're in the root folder of this project. To start the serve
 
 ```npx tsx src/server/Server.ts```.
 
-This will start a script listening to your local port 8789. To check that it is online, you can open [http://localhost:8789/]{http://localhost:8789/} in your browser. You should see 'cannot GET /'.
+This will start a script listening to your local port 8789. To check that it is online, you can open [http://localhost:8789/](http://localhost:8789/) in your browser. You should see 'cannot GET /'.
 
 Now to start the frontend website, run
 
 ```npm run dev```.
 
-Then you can open the website at [http://localhost:5173/]{http://localhost:5173/}.
+Then you can open the website at [http://localhost:5173/](http://localhost:5173/).
