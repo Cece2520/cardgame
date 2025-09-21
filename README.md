@@ -29,3 +29,9 @@ Now to start the frontend website, run
 ```npm run dev```.
 
 Then you can open the website at [http://localhost:5173/](http://localhost:5173/).
+
+## Project Structure
+
+This project is built on the Vite framework (so there are a lot of leftover artifacts oops), which uses React.js. All website and server code is found in the ```src``` folder. Frontend website components are in the ```components``` folder. Game logic is in the ```game``` folder, and the server code and API is in ```server```.
+
+To add components to the website, start building from ```components/GamePage.tsx```.
