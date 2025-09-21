@@ -1,69 +1,31 @@
-# React + TypeScript + Vite
+## Installing software/dependencies
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Install ```nvm``` (node version manager)
 
-Currently, two official plugins are available:
+```curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+In your terminal, navigate to the root folder of the repository. Run 
 
-## Expanding the ESLint configuration
+```nvm use 20```
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+to use ```node``` (which runs javascript/typescript on your computer) version 20. It will also give you ```npm``` (node package manager) to deal with all the dependencies.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Run 
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+```npm install``` 
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+to download dependencies (which will include typescript, etc.).
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Running the server and website locally
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Again, ensure that you're in the root folder of this project. To start the server locally, run
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+```npx tsx src/server/Server.ts```.
+
+This will start a script listening to your local port 8789. To check that it is online, you can open [http://localhost:8789/] in your browser. You should see 'cannot GET /'.
+
+Now to start the frontend website, run
+
+```npm run dev```.
+
+Then you can open the website at [http://localhost:5173/].
